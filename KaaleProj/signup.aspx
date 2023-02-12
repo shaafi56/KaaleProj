@@ -36,7 +36,8 @@
     
                 <div class="formControl">
                     <label for="email">Email</label>
-                    <input type="text" id="email" class="email" placeholder="Enter email...">
+                    <input type="text" id="email" class="email" placeholder="Enter email..." onkeydown="validation()">
+                    <span id="text">hello</span>
                 </div>
     
                 <div class="formControl">
@@ -59,5 +60,28 @@
 
     <script src="./main.js"></script>
     </form>
+
+    //waxaan damcay inaan email valid ku daro markaa adi ku dar wuu ii shaqayn wayee
+    <script type="text/javascript">
+        function validation() {
+            var form = document.getElementById("form");
+            var email = document.getElementById("email").value;
+            var text = document.getElementById("text");
+            var pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+            if (email.value(pattern)) {
+                form.classList.add("Valid");
+                form.classList.remove("inValid");
+                text.innerHTML = "your Email address is valid";
+                text.style.color = "#00ff00";
+            }
+            else {
+                form.classList.remove("inValid");
+                form.classList.add("Valid");
+                text.innerHTML = "please inter Email valid";
+                text.style.color = "#ff0000";
+            }
+
+        }
+    </script>
 </body>
 </html>
