@@ -1,0 +1,154 @@
+
+/* #showcase{
+    background: linear-gradient(rgba(4, 9, 30, 0.7),rgba(4, 9, 30, 0.7)), url("./images/pexels-olia-danilevich-4974915.jpg") ;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    min-height: 80vh;
+} */
+
+/*-------------------------Global-------------------------------*/
+.highlight{
+    color: rgb(24, 24, 105);
+}
+img{
+    width: 500px;
+    height: 500px;
+}
+a{
+    color: #fff;
+}
+
+body{
+    background-color: #1E1841;
+    color: #fff;
+}
+.menuLinks{
+    display: none;
+}
+.header{
+    display: flex;
+}
+.header img,.logo{
+    width: 100px;
+    height: 100px;
+}
+.showcase{
+    display: flex;
+    align-items: center;
+}
+.about{
+    display: flex;
+}
+.projects{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+/* .project{
+    border: 1px solid #fff;
+} */
+.project{
+    box-shadow: 0 2px 10px rgba(3, 153, 252, 0.3);
+    border: none;
+}
+.thumnailIamge img{
+    width: 100%;
+    height: 200px;
+}
+.wrapper{
+    width: 1000px;
+    margin: auto;
+}
+.projectThumnail img{
+    width: 100%;
+    height: 400px;
+}
+
+.search{
+    display: flex;
+}
+
+.recomendedProjects{
+    line-height: 0.5;
+}
+.recomendedProject{ 
+    box-shadow: 0 2px 10px rgba(3, 153, 252, 0.3);
+}
+.recomendedProject:hover{
+    border: 1px solid #0377fc;
+   
+}
+
+.recomdedProjectThumnail img{
+    width: 200px;
+    height: 100%;
+}
+
+.commentsHeader{
+    line-height: 0;
+}
+.previousCommentsSection{
+    padding: 10px 0;
+    box-shadow: 0 1px 5px rgba(3, 153, 252, 0.3);
+}
+.post-btn{
+    width: 180px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 1010px){
+    .wrapper{
+        width: 90%;
+        margin:auto
+    }
+}
+@media (max-width: 760px){
+    .showcase{
+        display: block;
+        margin-top: 50px;
+    }
+    .about{
+        display: block;
+    }
+    .projects{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media(max-width: 560px){
+    .header{
+        display: block;
+        text-align: center;
+    }
+    #signinbtn{
+        width: 100%;
+        margin-bottom: 1em;
+    }
+    .navbar{
+        display: none;
+    }
+    .menuLinks{
+        display: block;
+    }
+    .search{
+        display: block;
+    }
+
+}
+@media (max-width: 480px){
+    .projects{
+        grid-template-columns: 1fr;
+    }
+}

@@ -1,0 +1,59 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="masterPage.master.cs" Inherits="KaaleProj.masterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kaale</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="container">
+            <div class="header pt-md-5 pb-md-3  text-light">
+                <div class="col-2">
+                    <a href="Home.aspx"><img src="./assets/images/logo.png"></a>
+                </div>
+                <div class="col-9">
+                    <h3>Downloadable projects</h3>
+                    <p>Alittile descriptions about the web and what they can find</p>
+                </div>
+                <div class="col-2">
+                    <a href="login.aspx"  class="btn btn-outline-info text-light">LogIn</a>
+                </div>
+            </div>
+        </div>
+
+
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+
+        <div class="wrapper">
+                <div class="mt-5 d-flex justify-content-center border-top footer">
+                    <div>
+                        <div class="fs-3 d-flex justify-content-center m-2 icons">
+                            <a href="#"><i class="m-2 bi bi-facebook"></i></a>
+                            <a href="#"><i class="m-2 bi bi-youtube"></i></a>
+                            <a href="#"><i class="m-2 bi bi-linkedin"></i></a>
+                            <a href="#"><i class="m-2 bi bi-github"></i></a>
+                        </div>
+                        
+                        <p class="fs-5">Kaale &copy; Allrights are reserved | 2023</p>
+                    </div>
+                </div>
+            </div>
+    </form>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+</body>
+</html>
