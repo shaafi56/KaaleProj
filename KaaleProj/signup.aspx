@@ -27,29 +27,30 @@
             <form class="form" id="form">
                 <div class="formControl">
                     <label for="userName">Full Name</label>
-                    <input type="text" id="full name" class="userName" placeholder="Enter Full name...">
+                    <input type="text" id="fullname" runat="server" class="userName" placeholder="Enter Full name..." required>
                 </div>
                  <div class="formControl">
                     <label for="userName">User Name</label>
-                    <input type="text" id="userName" class="userName" placeholder="Enter username...">
+                    <input type="text" id="userName" class="userName" runat="server"  placeholder="Enter username..." required>
                 </div>
     
                 <div class="formControl">
                     <label for="email">Email</label>
-                    <input type="text" id="email" class="email" placeholder="Enter email..." onkeydown="validation()">
+                    <input type="text" id="email" runat="server"  class="email" placeholder="Enter email..." onkeydown="validation()" required>
                     <span id="text">hello</span>
                 </div>
     
                 <div class="formControl">
                     <label for="password">Password</label>
-                    <input type="password" id="password" class="password" placeholder="Create password...">
+                    <input type="password" id="password" runat="server"  class="password" placeholder="Create password..." required>
                 </div>
     
                 <div class="formControl">
                     <label for="confirmPassword">Confirm Password</label>
-                    <input type="password" id="confirmPassword" class="confirmPassword" placeholder="Again password...">
+                    <input type="password" id="confirmPassword" runat="server"  class="confirmPassword" placeholder="Again password..." required>
                 </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <asp:Button ID="Button1"  class="btn btn-primary" runat="server" Text="Submit" OnClick="Button1_Click" />
+
             </form>
         </div>
     </div>
