@@ -37,27 +37,40 @@ namespace KaaleProj
 
                 SqlCommand cmd = new SqlCommand(@"INSERT INTO userAccount  values('" + full_Name + "','" + user_name + "','" + user_email + "','"+ Password +"')", con);
 
-                //confirm password
-                if(Password == confirm_password)
+                //checking strong password
+                if(Password.Length > 6)
                 {
-                    cmd.ExecuteNonQuery();
-                    con.Close();
+                    //confirm password
+                    if (Password == confirm_password)
+                    {
+                        cmd.ExecuteNonQuery();
+                        con.Close();
 
 
-                    string message = "Your registration is successfully.";
-                    string script = "window.onload = function(){ alert('";
-                    script += message;
-                    script += "')};";
-                    ClientScript.RegisterStartupScript(this.GetType(), "SuccessMessage", script, true);
+                        string message = "Your registration is successfully.";
+                        string script = "window.onload = function(){ alert('";
+                        script += message;
+                        script += "')};";
+                        ClientScript.RegisterStartupScript(this.GetType(), "SuccessMessage", script, true);
+                    }
+                    else
+                    {
+                        string message = "two passwords is not match pls try again";
+                        string script = "window.onload = function(){ alert('";
+                        script += message;
+                        script += "')};";
+                        ClientScript.RegisterStartupScript(this.GetType(), "SuccessMessage", script, true);
+                    }
                 }
                 else
                 {
-                    string message = "two passwords is not match pls try again";
+                    string message = "pleas make strong password eg:(Kale123@$)";
                     string script = "window.onload = function(){ alert('";
                     script += message;
                     script += "')};";
                     ClientScript.RegisterStartupScript(this.GetType(), "SuccessMessage", script, true);
                 }
+               
 
                 
             }
