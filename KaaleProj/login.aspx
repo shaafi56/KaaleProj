@@ -27,17 +27,18 @@
                 
                 <div class="formControl">
                     <label for="email">Email</label>
-                    <input type="text" id="email" class="email" placeholder="Enter email...">
+                    <input type="text" id="email" runat="server" class="email" placeholder="Enter email...">
                 </div>
     
                 <div class="formControl">
                     <label for="password">Password</label>
-                    <input type="password" id="password" class="password" placeholder="Enter password...">
+                    <input type="password" id="password"  runat="server" class="password" placeholder="Enter password...">
                 </div>
-    
-                <a href="loginuserhome.aspx" class="btn btn-primary">LogIn</a>
+                <asp:Button ID="Button1"  class="btn btn-primary" runat="server" Text="LogIn" OnClick="Button1_Click" />
+                
             </form>
         </div>
+        
     </div>
     <div class="text-center mt-3">
         <a class="m-5" href="Home.aspx"><i class="bi bi-arrow-90deg-left"></i> Back To Home</a>
