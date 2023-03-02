@@ -69,8 +69,10 @@
   <ItemGroup>
     <Content Include="assets\css\bootstrap.css" />
     <Content Include="assets\css\bootstrap.min.css" />
+    <Content Include="assets\css\footer.css" />
     <Content Include="assets\css\login.css" />
     <Content Include="assets\css\style.css" />
+    <Content Include="assets\css\timeLine.css" />
     <Content Include="assets\images\Code typing-amico.png" />
     <Content Include="assets\images\logo.png" />
     <Content Include="assets\images\pexels-olia-danilevich-4974915.jpg" />
